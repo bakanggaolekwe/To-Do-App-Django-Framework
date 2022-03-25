@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load django_browser_reload %}
+<!-- <h1 class=" text-4xl mb-5 text-blue-600" >Tasks </h1> -->
+<div class="container flex justify-center items-center v-screen mt-5">
+    <h1 class=" text-3xl text-blue-700 font-bold">Edit Task </h1>
+
+</div>
+
+
+
+
+
+<!-- input form -->
+<div class="container flex justify-center items-center v-screen mt-5">
+    <!-- form  -->
+    <form action="." method="POST">
+        {% csrf_token %}
+        {{ form.task  }}
+
+        
+        <button id="btn"  class="absolute bg-blue-700 text-sm pt-2 pb-2 px-4 -ml-20  rounded-3xl text-stone-50" type="submit" >Submit</a>
+    </form>
+
+  
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
